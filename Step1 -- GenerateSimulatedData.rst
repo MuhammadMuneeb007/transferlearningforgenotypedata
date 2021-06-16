@@ -70,3 +70,16 @@ With -dl flag, we specify the risk allele. This parameter is not optional for ha
 See hapgen documentation for the parameters section.
 https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html#Download_and_Compilation
 
+
+
+### 11. Up to this point we have these files
+For cases
+CEU.out.cases.gen
+CEU.out.cases.haps
+CEU.out.cases.sample
+
+
+For controls
+CEU.out.controls.gen
+CEU.out.controls.haps
+CEU.out.controls.sample
