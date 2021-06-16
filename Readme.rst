@@ -61,4 +61,12 @@ Rename the file to CEU.leg
 COPY THESE 3 files to the "example" folder.
 
 
-### 10. 
+### 10. Open "hapgen" folder in the terminal and run the following command to make sure everything is working fine.
+./hapgen2 -m ./example/CEU.map -l ./example/CEU.leg -h ./example/CEU.haps -o ./example/CEU.out -dl 882608 0 0 0 203766544 0 0 0 -n 50 50
+
+
+With -dl flag, we specify the risk allele. This parameter is not optional for hapgen version 2. Make sure the SNP position (which is 882608 for SNP1 and 203766544 for SNP2) is also in the "CEU.map" file; otherwise, it will produce an error.  These risk SNP position can be different for YRI population. 
+
+See hapgen documentation for the parameters section.
+https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html#Download_and_Compilation
+
