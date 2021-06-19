@@ -1,3 +1,29 @@
 ### Merge these files using QCTOOL
+For cases
+CEU.out.cases.gen
+CEU.out.cases.sample
 
+For controls
+CEU.out.controls.gen
+CEU.out.controls.sample
+
+### STEP 1
+COMMAND
 ./qctool -g CEU.out.controls.gen -s CEU.out.controls.sample -g CEU.out.cases.gen -s CEU.out.cases.sample -og CEU.gen -os CEU.sample
+
+It will produce two files.
+CEU.gen "Combined cases and controls data."
+CEU.sample "Sample file"
+
+### STEP 2 
+In HAPGEN2 controls are identified as 0 and cases as 1. After that we will be using plink so we have to convert controls to 1 and cases to 0.
+Run the following python script. It will make modification in CEU.sample file
+
+import pandas as pd
+data = pd.read_csv('CEU.sample',delimiter=" ")
+print (data)
+data.pheno[data.pheno == "1"] = "2"
+data.pheno[data.pheno == "0"] = "1"
+print (data)
+data.to_csv('CEU.sample', index = False,sep="\t")
+
