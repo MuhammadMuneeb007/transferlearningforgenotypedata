@@ -27,3 +27,10 @@ data.pheno[data.pheno == "0"] = "1"
 print (data)
 data.to_csv('CEU.sample', index = False,sep="\t")
 
+### STEP 3 
+
+
+
+
+
+
