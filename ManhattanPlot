@@ -1,1 +1,3 @@
+### Merge these files using QCTOOL
 
+./qctool -g CEU.out.controls.gen -s CEU.out.controls.sample -g CEU.out.cases.gen -s CEU.out.cases.sample -og CEU.gen -os CEU.sample
