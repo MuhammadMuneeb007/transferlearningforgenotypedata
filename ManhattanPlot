@@ -28,6 +28,7 @@ print (data)
 data.to_csv('CEU.sample', index = False,sep="\t")
 
 After this step we will have two files. CEU.gen and CEU.sample.
+python changeCaseControls.py
 
 ### STEP 3 
 Convert CEU.gen and CEU.sample file to CEU.ped and CEU.map file using Gtool. Make your phenotype type column name is correct. In our case it was "pheno"
@@ -35,7 +36,7 @@ Convert CEU.gen and CEU.sample file to CEU.ped and CEU.map file using Gtool. Mak
 
 After this step we will have two files. CEU.ped and CEU.map.
 
-### STEP 3 
+### STEP 4
 Perform association test on CEU.ped and CEU.map file using plink and it will generate p-values and ODD ration for each snp.
 
 ./gtool -G --g CEU.gen --s CEU.sample --ped CEU.ped --map CEU.map --phenotype pheno
