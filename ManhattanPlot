@@ -39,7 +39,7 @@ After this step we will have two files. CEU.ped and CEU.map.
 ### STEP 4
 Perform association test on CEU.ped and CEU.map file using plink and it will generate p-values and ODD ration for each snp.
 
-./gtool -G --g CEU.gen --s CEU.sample --ped CEU.ped --map CEU.map --phenotype pheno
+./plink --file CEU --allow-no-sex --assoc
 
 After this step we will have two files. CEU.ped and CEU.map.
 
