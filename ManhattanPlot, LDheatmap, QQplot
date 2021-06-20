@@ -18,14 +18,14 @@ CEU.sample "Sample file."
 
 #############################################
 Generate LD heat map.
-Steps for generating the LD plots are independent of next steps so that is why it is here.
+Steps for generating the LD plots are independent of the next steps, so that is why it is here.
 
 Step 1.1
 Convert CEU.gen file into CEU.vcf file format using qctool
 ./qctool -g CEU.gen -og CEU.vcf
 
 Step 1.2
-After that we have to use R package. Run this script. Make sure you operate on subset of VCF file otherwise it will generate the error.
+After that, we have to use the R package. Run this script. Make sure you operate on a subset of the VCF file; otherwise, it may crash R studio.
 
 
 
@@ -34,11 +34,7 @@ require(vcfR)
 vcf <- read.vcfR("example.vcf", verbose = FALSE) 
 data <- vcf[0:10000,]
 alist<-vcfR2SnpMatrix(data, phased = NULL, subjects = NULL)
-
 LDheatmap(alist$data, alist$genetic.distance)
-
-
-
 
 #############################################
 
