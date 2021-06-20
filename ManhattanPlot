@@ -9,9 +9,10 @@ CEU.out.controls.sample
 
 ### STEP 1
 COMMAND
-./qctool -g CEU.out.controls.gen -s CEU.out.controls.sample -g CEU.out.cases.gen -s CEU.out.cases.sample -og CEU.gen -os CEU.sample
+FALE ####./qctool -g CEU.out.controls.gen -s CEU.out.controls.sample -g CEU.out.cases.gen -s CEU.out.cases.sample -og CEU.gen -os CEU.sample
+TRUE ./gtool -M --g CEU.out.controls.gen CEU.out.cases.gen --s CEU.out.controls.sample CEU.out.cases.sample --log example/example10_example11.log
 
-It will produce two files.
+It will produce two files. .gen and .sample. Rename them.
 CEU.gen "Combined cases and controls data."
 CEU.sample "Sample file"
 
