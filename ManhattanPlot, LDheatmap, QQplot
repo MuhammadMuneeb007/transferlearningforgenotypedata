@@ -92,7 +92,11 @@ manhattan(snp,chr = "CHR", bp = "BP", p = "P", snp = "SNP",
           suggestiveline = -log10(1e-05), genomewideline = -log10(5e-08),
           logp = TRUE, annotatePval = NULL,
           annotateTop = TRUE)
+#############################################
+Generate QQplot.
+qq(snp$P) 
 
+#############################################
 
 This will generate a manhattan plot.
 
